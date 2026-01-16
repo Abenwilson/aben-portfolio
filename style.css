@@ -281,15 +281,15 @@ a {
     display: grid;
     /* Flexible grid: fits as many 280px+ cards as possible, then wraps */
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 10rem;
-    /* Increased to 10rem for massive spacing */
+    gap: 12rem;
+    /* Increased to 12rem for massive spacing */
 }
 
 /* Specific Mobile Adjustments */
 @media (max-width: 600px) {
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 6rem;
     }
 
     .container {
@@ -309,8 +309,8 @@ a {
 
 /* Apply glow to all project cards */
 .project-card {
-    box-shadow: 0 0 15px var(--accent-glow);
-    border-color: var(--accent);
+    /* box-shadow removed as requested */
+    border-color: var(--glass-border);
 }
 
 .project-tech {
