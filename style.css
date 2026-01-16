@@ -1,31 +1,35 @@
 /* Global Variables & Reset */
 :root {
-    /* Dark Mode (Default) */
-    --bg-color: #050505;
-    --text-primary: #ffffff;
-    --text-secondary: #a3a3a3;
-    --accent: #3b82f6;
-    /* Blue for Flutter/Tech */
-    --accent-glow: rgba(59, 130, 246, 0.5);
+    /* Professional Dark Mode (Slate/Navy) */
+    --bg-color: #0f172a;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent: #38bdf8;
+    /* Sky Blue - Professional & Calm */
+    --accent-glow: rgba(56, 189, 248, 0.25);
+    /* Subtle glow */
 
-    /* Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-blur: 16px;
+    /* Professional Glassmorphism */
+    --glass-bg: rgba(30, 41, 59, 0.7);
+    /* More solid/legible */
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-blur: 12px;
 
     /* Transitions */
     --transition-speed: 0.3s;
 }
 
 [data-theme="light"] {
-    --bg-color: #f8fafc;
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --accent: #2563eb;
-    --accent-glow: rgba(37, 99, 235, 0.3);
+    --bg-color: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --accent: #0284c7;
+    /* Deep Sky Blue */
+    --accent-glow: rgba(2, 132, 199, 0.15);
 
-    --glass-bg: rgba(255, 255, 255, 0.9);
-    --glass-border: rgba(0, 0, 0, 0.08);
+    --glass-bg: rgba(241, 245, 249, 0.8);
+    /* Slight off-white tint */
+    --glass-border: rgba(0, 0, 0, 0.06);
 }
 
 * {
@@ -109,9 +113,11 @@ a {
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border: 1px solid var(--glass-border);
-    border-radius: 20px;
-    padding: 1.5rem;
-    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 12px;
+    /* Slightly squarer for professional look */
+    padding: 2rem;
+    /* Restore padding for breathing room */
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 .glass-card:hover {
@@ -160,6 +166,7 @@ a {
     font-weight: 700;
     background: linear-gradient(135deg, var(--text-primary), var(--accent));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
