@@ -1,35 +1,37 @@
-/* Global Variables & Reset */
 :root {
-    /* Professional Dark Mode (Slate/Navy) */
-    --bg-color: #0f172a;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --accent: #38bdf8;
-    /* Sky Blue - Professional & Calm */
-    --accent-glow: rgba(56, 189, 248, 0.25);
-    /* Subtle glow */
+    /* Dark Mode (Default) - "Rich Neutral" */
+    --bg-color: #0a0a0a;
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    /* Zinc-400 */
+    --accent: #8b5cf6;
+    /* Modern Violet */
+    --accent-glow: rgba(139, 92, 246, 0.4);
+    /* Softer glow */
 
-    /* Professional Glassmorphism */
-    --glass-bg: rgba(30, 41, 59, 0.7);
-    /* More solid/legible */
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-blur: 12px;
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.06);
+    /* Thinner/subtler border */
+    --glass-blur: 20px;
+    /* Higher blur for smoother look */
 
     /* Transitions */
-    --transition-speed: 0.3s;
+    --transition-speed: 0.4s;
 }
 
 [data-theme="light"] {
-    --bg-color: #ffffff;
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
-    --accent: #0284c7;
-    /* Deep Sky Blue */
-    --accent-glow: rgba(2, 132, 199, 0.15);
+    --bg-color: #fafafa;
+    /* Clean warm white */
+    --text-primary: #18181b;
+    --text-secondary: #52525b;
+    --accent: #7c3aed;
+    /* Deep Violet */
+    --accent-glow: rgba(124, 58, 237, 0.2);
 
-    --glass-bg: rgba(241, 245, 249, 0.8);
-    /* Slight off-white tint */
-    --glass-border: rgba(0, 0, 0, 0.06);
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    /* Clean frosted look */
+    --glass-border: rgba(0, 0, 0, 0.04);
 }
 
 * {
@@ -113,11 +115,9 @@ a {
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     border: 1px solid var(--glass-border);
-    border-radius: 12px;
-    /* Slightly squarer for professional look */
-    padding: 2rem;
-    /* Restore padding for breathing room */
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    border-radius: 20px;
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .glass-card:hover {
@@ -166,7 +166,6 @@ a {
     font-weight: 700;
     background: linear-gradient(135deg, var(--text-primary), var(--accent));
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -224,15 +223,13 @@ a {
 .glow-1 {
     top: -10%;
     right: -10%;
-    background: #14b8a6;
-    /* Teal */
+    background: var(--accent);
 }
 
 .glow-2 {
     bottom: -10%;
     left: -10%;
-    background: #6366f1;
-    /* Indigo */
+    background: purple;
 }
 
 .hero-content h1 {
@@ -279,26 +276,17 @@ a {
 /* Projects Section */
 .projects-grid {
     display: grid;
-    /* Fixed 3 columns as requested */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    /* Reduced gap to fit 3 columns comfortably */
+    /* Flexible grid: fits as many 280px+ cards as possible, then wraps */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10rem;
+    /* Increased to 10rem for massive spacing */
 }
 
 /* Specific Mobile Adjustments */
-@media (max-width: 900px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 cols on tablet */
-        gap: 1.5rem;
-    }
-}
-
 @media (max-width: 600px) {
     .projects-grid {
         grid-template-columns: 1fr;
-        /* 1 col on mobile */
-        gap: 1.5rem;
+        gap: 3rem;
     }
 
     .container {
@@ -320,15 +308,6 @@ a {
 .project-card {
     box-shadow: 0 0 15px var(--accent-glow);
     border-color: var(--accent);
-    aspect-ratio: 1 / 1;
-    /* Make card square */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* Center content vertically */
-    align-items: center;
-    /* Center content horizontally */
-    text-align: center;
 }
 
 .project-tech {
@@ -336,8 +315,6 @@ a {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin: 1rem 0;
-    justify-content: center;
-    /* Center the pills */
 }
 
 .tech-pill {
