@@ -279,17 +279,26 @@ a {
 /* Projects Section */
 .projects-grid {
     display: grid;
-    /* Flexible grid: fits as many 280px+ cards as possible, then wraps */
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 12rem;
-    /* Increased to 12rem for massive spacing */
+    /* Fixed 3 columns as requested */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    /* Reduced gap to fit 3 columns comfortably */
 }
 
 /* Specific Mobile Adjustments */
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cols on tablet */
+        gap: 1.5rem;
+    }
+}
+
 @media (max-width: 600px) {
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: 6rem;
+        /* 1 col on mobile */
+        gap: 1.5rem;
     }
 
     .container {
@@ -309,8 +318,17 @@ a {
 
 /* Apply glow to all project cards */
 .project-card {
-    /* box-shadow removed as requested */
-    border-color: var(--glass-border);
+    box-shadow: 0 0 15px var(--accent-glow);
+    border-color: var(--accent);
+    aspect-ratio: 1 / 1;
+    /* Make card square */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    text-align: center;
 }
 
 .project-tech {
@@ -318,6 +336,8 @@ a {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin: 1rem 0;
+    justify-content: center;
+    /* Center the pills */
 }
 
 .tech-pill {
