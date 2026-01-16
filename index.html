@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aben Wilson | Software Developer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-theme="dark">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">AW.</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <i class="ph ph-sun"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section">
+        <div class="bg-glow glow-1"></div>
+        <div class="bg-glow glow-2"></div>
+
+        <div class="container hero-content animate-on-scroll">
+            <p class="hero-subtitle">Hi 👋, I'm Aben Wilson</p>
+            <h1>Building Digital <br> <span>Experiences</span></h1>
+            <p class="project-desc" style="max-width: 600px; margin-bottom: 2rem;">
+                MCA Student & Software Developer tailored in Flutter and Full-Stack Development. I transform complex
+                problems into elegant, scalable solutions.
+            </p>
+
+            <div style="display: flex; gap: 1rem;">
+                <a href="#projects" class="btn btn-primary">
+                    View Work <i class="ph ph-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/Abenwilson" target="_blank" class="nav-link"><i class="ph ph-github-logo"
+                        style="font-size: 1.5rem;"></i></a>
+                <a href="https://www.linkedin.com/in/aben-wilson-11601a348/" target="_blank" class="nav-link"><i
+                        class="ph ph-linkedin-logo" style="font-size: 1.5rem;"></i></a>
+                <a href="mailto:abenwilson1@gmail.com" class="nav-link"><i class="ph ph-envelope"
+                        style="font-size: 1.5rem;"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container animate-on-scroll">
+            <h2 style="margin-bottom: 2rem;">About Me</h2>
+            <div class="glass-card">
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                    I am an MCA student and an enthusiastic software developer with a strong passion for creating
+                    scalable, user-centric, and high-quality digital solutions. With a growing foundation in modern
+                    development technologies and a mindset focused on continuous improvement, I enjoy transforming ideas
+                    into functional applications.
+                </p>
+                <p style="color: var(--text-secondary);">
+                    I’m particularly interested in full-stack development, mobile app engineering, and cloud-integrated
+                    systems. I thrive on learning new tools, solving challenging problems, and building projects that
+                    make a real impact.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container animate-on-scroll">
+            <h2 style="margin-bottom: 3rem;">Technical Arsenal</h2>
+
+            <div class="skills-grid">
+                <!-- Mobile -->
+                <div class="glass-card skill-category">
+                    <h3>Mobile & Core</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="skill-tag"><i class="ph ph-device-mobile" style="color: var(--accent);"></i> Flutter
+                        </div>
+                        <div class="skill-tag"><i class="ph ph-code" style="color: var(--accent);"></i> Dart</div>
+                        <div class="skill-tag"><i class="ph ph-code" style="color: var(--accent);"></i> Python</div>
+                        <div class="skill-tag"><i class="ph ph-code" style="color: var(--accent);"></i> C++</div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="glass-card skill-category">
+                    <h3>Backend & Cloud</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="skill-tag"><i class="ph ph-database" style="color: var(--accent);"></i> Firebase
+                        </div>
+                        <div class="skill-tag"><i class="ph ph-database" style="color: var(--accent);"></i> Supabase
+                        </div>
+                        <div class="skill-tag"><i class="ph ph-server" style="color: var(--accent);"></i> PHP</div>
+                        <div class="skill-tag"><i class="ph ph-cloud" style="color: var(--accent);"></i> Terraform</div>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="glass-card skill-category">
+                    <h3>Tools</h3>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="skill-tag"><i class="ph ph-git-branch" style="color: var(--accent);"></i> Git &
+                            GitHub</div>
+                        <div class="skill-tag"><i class="ph ph-code" style="color: var(--accent);"></i> VS Code</div>
+                        <div class="skill-tag"><i class="ph ph-terminal" style="color: var(--accent);"></i> CLI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container animate-on-scroll">
+            <h2 style="margin-bottom: 3rem;">Featured Work</h2>
+
+            <div class="projects-grid">
+
+                <!-- Project 1 (New) -->
+                <div class="glass-card project-card">
+                    <h3>Creator Bridge</h3>
+                    <p class="project-desc">A platform connecting video editors with clients. Users can create profiles,
+                        like others, post inquiries, and find work.</p>
+                    <div class="project-tech">
+                        <span class="tech-pill">Web</span>
+                        <span class="tech-pill">Social</span>
+                        <span class="tech-pill">Firebase</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Project 2 -->
+            <div class="glass-card project-card featured-glow">
+                <h3>Chess Connect</h3>
+                <p class="project-desc">A strategic chess application built with Flutter, Firebase, and Bloc
+                    Architecture.</p>
+                <div class="project-tech">
+                    <span class="tech-pill">Flutter</span>
+                    <span class="tech-pill">Firebase</span>
+                    <span class="tech-pill">Bloc</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Abenwilson/Chess-connect" target="_blank" class="btn-outline"
+                        style="padding: 0.5rem 1rem; font-size: 0.9rem;">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="glass-card project-card">
+                <h3>Airline Reservation</h3>
+                <p class="project-desc">A system for managing airline bookings and reservations.</p>
+                <div class="project-tech">
+                    <span class="tech-pill">CSS</span>
+                    <span class="tech-pill">Web</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Abenwilson/Airline-Reservation" target="_blank" class="btn-outline"
+                        style="padding: 0.5rem 1rem; font-size: 0.9rem;">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="glass-card project-card">
+                <h3>Text App</h3>
+                <p class="project-desc">A messaging or text processing application built with Dart.</p>
+                <div class="project-tech">
+                    <span class="tech-pill">Dart</span>
+                    <span class="tech-pill">Flutter</span>
+                    <span class="tech-pill">Supabase</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Abenwilson/Text-App" target="_blank" class="btn-outline"
+                        style="padding: 0.5rem 1rem; font-size: 0.9rem;">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project 5 (New) -->
+            <div class="glass-card project-card">
+                <h3>Budget Calculator</h3>
+                <p class="project-desc">A Flutter app to track expenses and manage budgets efficiently.</p>
+                <div class="project-tech">
+                    <span class="tech-pill">Flutter</span>
+                    <span class="tech-pill">Dart</span>
+                    <span class="tech-pill">Firebase</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Abenwilson/Budget-Calculator" target="_blank" class="btn-outline"
+                        style="padding: 0.5rem 1rem; font-size: 0.9rem;">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project 6 (New) -->
+            <div class="glass-card project-card">
+                <h3>Coffee House</h3>
+                <p class="project-desc">A coffee shop ordering application built with Flutter.</p>
+                <div class="project-tech">
+                    <span class="tech-pill">Flutter</span>
+                    <span class="tech-pill">Dart</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Abenwilson/Coffee-House" target="_blank" class="btn-outline"
+                        style="padding: 0.5rem 1rem; font-size: 0.9rem;">GitHub</a>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container animate-on-scroll contact-wrapper">
+            <h2>Let's Connect</h2>
+            <p>I'm currently available for freelance work and internships. <br> Have a project in mind? Let's talk.</p>
+            <a href="mailto:abenwilson1@gmail.com" class="btn btn-primary">
+                Say Hello <i class="ph ph-paper-plane-right"></i>
+            </a>
+
+            <footer style="margin-top: 4rem; color: var(--text-secondary); font-size: 0.9rem;">
+                <p>&copy; 2025 Aben Wilson. Built with 💙 & Code.</p>
+            </footer>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
