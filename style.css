@@ -381,18 +381,38 @@ a {
 }
 
 /* Typing Animation */
+/* Typing Animation */
 .typing-text {
     color: var(--text-primary);
-    /* Ensuring white/primary color */
     display: inline-block;
-    overflow: hidden;
-    border-right: 3px solid var(--accent);
-    white-space: nowrap;
-    width: 0;
-    /* max-width removed to allow full width based on steps */
-    animation:
-        typing 3s steps(30, end) forwards,
-        blink-caret 0.75s step-end infinite;
+    white-space: pre-line;
+    /* Allows \n to create new lines */
+    position: relative;
+    line-height: 1.2;
+}
+
+/* Cursor using pseudo-element to track multiline text */
+.typing-text::after {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background-color: var(--accent);
+    margin-left: 5px;
+    vertical-align: -0.1em;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
 }
 
 @keyframes typing {
