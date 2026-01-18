@@ -1,17 +1,20 @@
 :root {
-    /* Dark Mode (Default) - "Rich Neutral" */
-    --bg-color: #0a0a0a;
+    /* Dark Mode (Default) - "Monochrome Black" */
+    --bg-color: #000000;
     --text-primary: #ffffff;
     --text-secondary: #a1a1aa;
-    /* Zinc-400 */
-    --accent: #8b5cf6;
-    /* Modern Violet */
-    --accent-glow: rgba(139, 92, 246, 0.4);
-    /* Softer glow */
+    /* Neutral Gray */
+    --accent: #ffffff;
+    /* Solid White Accent */
+    --accent-glow: rgba(255, 255, 255, 0.25);
+    /* White Glow */
+    --btn-text: #000000;
+    /* Black text for White buttons */
 
     /* Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.06);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    /* Subtle white tint */
+    --glass-border: rgba(255, 255, 255, 0.1);
     /* Thinner/subtler border */
     --glass-blur: 20px;
     /* Higher blur for smoother look */
@@ -21,17 +24,18 @@
 }
 
 [data-theme="light"] {
-    --bg-color: #fafafa;
-    /* Clean warm white */
-    --text-primary: #18181b;
+    --bg-color: #ffffff;
+    --text-primary: #000000;
     --text-secondary: #52525b;
-    --accent: #7c3aed;
-    /* Deep Violet */
-    --accent-glow: rgba(124, 58, 237, 0.2);
+    --accent: #000000;
+    /* Solid Black Accent */
+    --accent-glow: rgba(0, 0, 0, 0.15);
+    --btn-text: #ffffff;
+    /* White text for Black buttons */
 
-    --glass-bg: rgba(255, 255, 255, 0.85);
-    /* Clean frosted look */
-    --glass-border: rgba(0, 0, 0, 0.04);
+    --glass-bg: rgba(0, 0, 0, 0.03);
+    /* Subtle black tint */
+    --glass-border: rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -88,7 +92,7 @@ a {
 
 .btn-primary {
     background: var(--accent);
-    color: white;
+    color: var(--btn-text);
     box-shadow: 0 0 20px var(--accent-glow);
 }
 
@@ -164,9 +168,8 @@ a {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--text-primary), var(--accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-primary);
+    /* background: linear-gradient... removed for solid white */
 }
 
 .nav-links {
@@ -229,7 +232,7 @@ a {
 .glow-2 {
     bottom: -10%;
     left: -10%;
-    background: purple;
+    background: #333333;
 }
 
 .hero-content h1 {
@@ -307,6 +310,7 @@ a {
 /* Apply glow to all project cards */
 .project-card {
     box-shadow: 0 0 15px var(--accent-glow);
+    margin-bottom: 2rem;
     border-color: var(--accent);
 }
 
@@ -373,5 +377,42 @@ a {
 
     .section {
         padding: 4rem 0;
+    }
+}
+
+/* Typing Animation */
+.typing-text {
+    color: var(--text-primary);
+    /* Ensuring white/primary color */
+    display: inline-block;
+    overflow: hidden;
+    border-right: 3px solid var(--accent);
+    white-space: nowrap;
+    width: 0;
+    /* max-width removed to allow full width based on steps */
+    animation:
+        typing 3s steps(30, end) forwards,
+        blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--accent)
     }
 }
