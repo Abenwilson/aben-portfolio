@@ -1,35 +1,4 @@
 
-// Theme Toggling
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-const icon = themeToggle.querySelector('i');
-
-// Check local storage
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
-    body.setAttribute('data-theme', savedTheme);
-    updateIcon(savedTheme);
-}
-
-themeToggle.addEventListener('click', () => {
-    const currentTheme = body.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-
-    body.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateIcon(newTheme);
-});
-
-function updateIcon(theme) {
-    if (theme === 'light') {
-        icon.classList.remove('ph-sun');
-        icon.classList.add('ph-moon');
-    } else {
-        icon.classList.remove('ph-moon');
-        icon.classList.add('ph-sun');
-    }
-}
-
 // Scroll Animations
 const observerOptions = {
     threshold: 0.1

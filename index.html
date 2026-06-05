@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body data-theme="dark">
+<body>
 
     <!-- Navbar -->
     <nav class="navbar">
@@ -33,9 +33,6 @@
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
-                <i class="ph ph-sun"></i>
-            </button>
         </div>
     </nav>
 
@@ -44,30 +41,37 @@
         <div class="bg-glow glow-1"></div>
         <div class="bg-glow glow-2"></div>
 
-        <div class="container hero-content animate-on-scroll">
-            <p class="hero-subtitle">Hi 👋, I'm Aben Wilson</p>
-            <h1><span class="typing-text"></span></h1>
-            <p class="project-desc" style="max-width: 600px; margin-bottom: 2rem;">
-                MCA Student & Software Developer tailored in Flutter and Full-Stack Development. I transform complex
-                problems into elegant, scalable solutions.
-            </p>
-
-            <div style="display: flex; gap: 1rem;">
-                <a href="#projects" class="btn btn-primary">
-                    View Work <i class="ph ph-arrow-right"></i>
-                </a>
-                <a href="#contact" class="btn btn-outline">
-                    Contact Me
-                </a>
+        <div class="container hero-container animate-on-scroll">
+            <div class="hero-image-wrapper">
+                <div class="profile-card">
+                    <img src="assets/images/profile.jpg" alt="Aben Wilson" class="profile-img">
+                </div>
             </div>
+            <div class="hero-content">
+                <p class="hero-subtitle">Hi, I'm Aben Wilson</p>
+                <h1><span class="typing-text"></span></h1>
+                <p class="project-desc" style="max-width: 600px; margin-bottom: 2rem;">
+                    MCA Student & Software Developer tailored in Flutter and Full-Stack Development. I transform complex
+                    problems into elegant, scalable solutions.
+                </p>
 
-            <div class="social-links">
-                <a href="https://github.com/Abenwilson" target="_blank" class="nav-link"><i class="ph ph-github-logo"
-                        style="font-size: 1.5rem;"></i></a>
-                <a href="https://www.linkedin.com/in/aben-wilson-11601a348/" target="_blank" class="nav-link"><i
-                        class="ph ph-linkedin-logo" style="font-size: 1.5rem;"></i></a>
-                <a href="mailto:abenwilson1@gmail.com" class="nav-link"><i class="ph ph-envelope"
-                        style="font-size: 1.5rem;"></i></a>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        View Work <i class="ph ph-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        Contact Me
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/Abenwilson" target="_blank" class="nav-link"><i class="ph ph-github-logo"
+                            style="font-size: 1.5rem;"></i></a>
+                    <a href="https://www.linkedin.com/in/aben-wilson-11601a348/" target="_blank" class="nav-link"><i
+                            class="ph ph-linkedin-logo" style="font-size: 1.5rem;"></i></a>
+                    <a href="mailto:abenwilson1@gmail.com" class="nav-link"><i class="ph ph-envelope"
+                            style="font-size: 1.5rem;"></i></a>
+                </div>
             </div>
         </div>
     </section>
@@ -154,6 +158,10 @@
                         <span class="tech-pill">Social</span>
                         <span class="tech-pill">Firebase</span>
                     </div>
+                    <div class="project-links">
+                        <a href="https://creator-bridge-three.vercel.app/" target="_blank" class="btn btn-primary"
+                            style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Live Demo</a>
+                    </div>
                 </div>
 
 
@@ -234,6 +242,33 @@
             </div>
 
         </div>
+        </div>
+    </section>
+
+    <!-- Projects Demo Section -->
+    <section id="projects-demo" class="section">
+        <div class="container animate-on-scroll">
+            <h2 style="margin-bottom: 3rem;">Projects Demo</h2>
+            <div class="demo-carousel-wrapper">
+                <div class="demo-carousel">
+                    <!-- Set 1 -->
+                    <div class="demo-card"><img src="assets/images/demo1.png" alt="Demo 1"></div>
+                    <div class="demo-card"><img src="assets/images/demo2.png" alt="Demo 2"></div>
+                    <div class="demo-card"><img src="assets/images/demo3.png" alt="Demo 3"></div>
+                    <div class="demo-card"><img src="assets/images/demo4.png" alt="Demo 4"></div>
+                    <div class="demo-card"><img src="assets/images/demo5.png" alt="Demo 5"></div>
+                    <div class="demo-card"><img src="assets/images/demo6.png" alt="Demo 6"></div>
+                    <div class="demo-card"><img src="assets/images/demo7.png" alt="Demo 7"></div>
+                    <!-- Set 2 (Duplicated for seamless loop) -->
+                    <div class="demo-card"><img src="assets/images/demo1.png" alt="Demo 1"></div>
+                    <div class="demo-card"><img src="assets/images/demo2.png" alt="Demo 2"></div>
+                    <div class="demo-card"><img src="assets/images/demo3.png" alt="Demo 3"></div>
+                    <div class="demo-card"><img src="assets/images/demo4.png" alt="Demo 4"></div>
+                    <div class="demo-card"><img src="assets/images/demo5.png" alt="Demo 5"></div>
+                    <div class="demo-card"><img src="assets/images/demo6.png" alt="Demo 6"></div>
+                    <div class="demo-card"><img src="assets/images/demo7.png" alt="Demo 7"></div>
+                </div>
+            </div>
         </div>
     </section>
 
