@@ -232,6 +232,24 @@ a {
     object-fit: cover;
 }
 
+.profile-views {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    border-top: 1px solid rgba(15, 23, 42, 0.05);
+    padding-top: 0.6rem;
+}
+
+.profile-views i {
+    font-size: 1.1rem;
+    color: var(--accent);
+}
+
 .hero-content {
     flex: 1;
 }

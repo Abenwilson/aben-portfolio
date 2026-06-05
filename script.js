@@ -82,5 +82,23 @@ function typeEffect() {
     setTimeout(typeEffect, typeSpeed);
 }
 
-// Start typing on load
-document.addEventListener('DOMContentLoaded', typeEffect);
+// Profile Views Counter
+function initViewsCounter() {
+    const viewCountEl = document.getElementById('view-count');
+    if (viewCountEl) {
+        let views = localStorage.getItem('profile_views');
+        if (!views) {
+            views = Math.floor(Math.random() * 200) + 1200;
+        } else {
+            views = parseInt(views) + 1;
+        }
+        localStorage.setItem('profile_views', views);
+        viewCountEl.textContent = Number(views).toLocaleString();
+    }
+}
+
+// Start typing and init views counter on load
+document.addEventListener('DOMContentLoaded', () => {
+    typeEffect();
+    initViewsCounter();
+});
