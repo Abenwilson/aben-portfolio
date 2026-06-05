@@ -232,24 +232,6 @@ a {
     object-fit: cover;
 }
 
-.profile-views {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 0.8rem;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    font-weight: 500;
-    border-top: 1px solid rgba(15, 23, 42, 0.05);
-    padding-top: 0.6rem;
-}
-
-.profile-views i {
-    font-size: 1.1rem;
-    color: var(--accent);
-}
-
 .hero-content {
     flex: 1;
 }
@@ -546,4 +528,36 @@ a {
     100% {
         transform: translateX(-50%);
     }
+}
+
+/* Visitor Counter */
+.visitor-counter {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--glass-bg);
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.03);
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.visitor-counter:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.06);
+    border-color: rgba(15, 23, 42, 0.15);
+}
+
+.visitor-counter i {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+.visitor-counter #visit-count {
+    color: var(--text-primary);
+    font-weight: 700;
 }

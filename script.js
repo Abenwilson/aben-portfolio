@@ -82,23 +82,22 @@ function typeEffect() {
     setTimeout(typeEffect, typeSpeed);
 }
 
-// Profile Views Counter
-function initViewsCounter() {
-    const viewCountEl = document.getElementById('view-count');
-    if (viewCountEl) {
-        let views = localStorage.getItem('profile_views');
-        if (!views) {
-            views = Math.floor(Math.random() * 200) + 1200;
-        } else {
-            views = parseInt(views) + 1;
-        }
-        localStorage.setItem('profile_views', views);
-        viewCountEl.textContent = Number(views).toLocaleString();
-    }
-}
-
-// Start typing and init views counter on load
+// Start typing on load
 document.addEventListener('DOMContentLoaded', () => {
     typeEffect();
-    initViewsCounter();
+    
+    // Visitor Counter Fetch
+    const visitCountEl = document.getElementById('visit-count');
+    if (visitCountEl) {
+        fetch('https://api.counterapi.dev/v1/projects/abenwilson-portfolio/counter/visits/up')
+            .then(res => res.json())
+            .then(data => {
+                // Formatting number with commas for premium look
+                visitCountEl.textContent = Number(data.value).toLocaleString();
+            })
+            .catch(err => {
+                console.error('Failed to load visit count:', err);
+                visitCountEl.textContent = '1,248'; // Fallback mockup number
+            });
+    }
 });
